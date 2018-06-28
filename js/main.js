@@ -1,3 +1,10 @@
+$(window).on('load', function() { // makes sure the whole site is loaded 
+    $('#status').fadeOut(); // will first fade out the loading animation 
+    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+    $('body').delay(350).css({ 'overflow': 'visible' });
+    $('.container').delay(350).css({ 'display': 'grid' });
+});
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
        	// lockAnchors: true,
@@ -7,8 +14,10 @@ $(document).ready(function() {
     });
 
 
-    new WOW().init();
+    new WOW().init(); //wow script for animations while scroll
 
+
+// images zooming
     $('.image-popup-no-margins').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
