@@ -1,1 +1,2 @@
-# zorochimaru.github.io Rasim Karimli CV
+# zorochimaru.github.io
+Karimli Rasim CV
