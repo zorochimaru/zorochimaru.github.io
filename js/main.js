@@ -5,19 +5,40 @@ $(window).on('load', function() { // makes sure the whole site is loaded
     $('.container').delay(350).css({ 'display': 'grid' });
 });
 
+
+
 $(document).ready(function() {
     $('#fullpage').fullpage({
-       	// lockAnchors: true,
         anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
         menu: '#myMenu',
         verticalCentered: true,
+        afterLoad: function(anchorLink) {
+            if (anchorLink == 'page3') {
+                window.randomize = function() {
+                    $('#python').attr('data-progress', Math.floor(80));
+                    $('#c').attr('data-progress', Math.floor(70));
+                    $('#java').attr('data-progress', Math.floor(50));
+                }
+                setTimeout(window.randomize, 500);
+                $('.ko-progress-circle').click(window.randomize);
+            }
+        },
+        onLeave: function(index, nextIndex) {
+            if (index == 3) {
+                $('.ko-progress-circle').attr('data-progress', Math.floor(0));
+            }
+
+        },
+
     });
+
 
 
     new WOW().init(); //wow script for animations while scroll
 
 
-// images zooming
+
+    // images zooming
     $('.image-popup-no-margins').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
