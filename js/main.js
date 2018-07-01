@@ -18,6 +18,7 @@ $(document).ready(function() {
                     $('#python').attr('data-progress', Math.floor(80));
                     $('#c').attr('data-progress', Math.floor(70));
                     $('#java').attr('data-progress', Math.floor(50));
+                    $('#js').attr('data-progress', Math.floor(70));
                 }
                 setTimeout(window.randomize, 500);
                 $('.ko-progress-circle').click(window.randomize);
