@@ -15,9 +15,9 @@ $(document).ready(function() {
         afterLoad: function(anchorLink) {
             if (anchorLink == 'page3') {
                 window.randomize = function() {
-                    $('#python').attr('data-progress', Math.floor(80));
-                    $('#c').attr('data-progress', Math.floor(70));
-                    $('#java').attr('data-progress', Math.floor(50));
+                    $('#python').attr('data-progress', Math.floor(70));
+                    $('#c').attr('data-progress', Math.floor(60));
+                    $('#java').attr('data-progress', Math.floor(30));
                     $('#js').attr('data-progress', Math.floor(70));
                 }
                 setTimeout(window.randomize, 500);
