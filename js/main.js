@@ -1,3 +1,4 @@
+//PRELOADER
 $(window).on('load', function() { // makes sure the whole site is loaded 
     $('#status').fadeOut(); // will first fade out the loading animation 
     $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
@@ -6,12 +7,13 @@ $(window).on('load', function() { // makes sure the whole site is loaded
 });
 
 
-
+//FULLPAGEJS
 $(document).ready(function() {
     $('#fullpage').fullpage({
         anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
         menu: '#myMenu',
         verticalCentered: true,
+        //CIRCLE PROGRESS BARS ANIMATION
         afterLoad: function(anchorLink) {
             if (anchorLink == 'page3') {
                 window.randomize = function() {
@@ -33,11 +35,7 @@ $(document).ready(function() {
 
     });
 
-
-
     new WOW().init(); //wow script for animations while scroll
-
-
 
     // images zooming
     $('.image-popup-no-margins').magnificPopup({
