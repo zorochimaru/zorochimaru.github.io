@@ -37,19 +37,38 @@ $(document).ready(function() {
 
     new WOW().init(); //wow script for animations while scroll
 
-    // images zooming
-    $('.image-popup-no-margins').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        closeBtnInside: false,
-        fixedContentPos: true,
-        mainClass: 'mfp-with-zoom', // class to remove default margin from left and right side
-        image: {
-            verticalFit: true
-        },
-        zoom: {
-            enabled: true,
-            duration: 300 // don't foget to change the duration also in CSS
-        }
-    });
+
+    // Magnific-popup
+    $('.image-popup').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            closeBtnInside: false,
+            fixedContentPos: true,
+            mainClass: 'mfp-with-zoom', // class to remove default margin from left and right side
+            image: {
+                verticalFit: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300 // don't foget to change the duration also in CSS
+            }
+    }); 
+    $('.gallery').magnificPopup({
+            delegate: 'a', // the selector for gallery item
+            gallery: {
+              enabled:true
+            },
+            type: 'image',
+            preload: [0,2], // read about this option in next Lazy-loading section
+            closeBtnInside: false,
+            fixedContentPos: true,
+            mainClass: 'mfp-with-zoom', // class to remove default margin from left and right side
+            image: {
+                verticalFit: true
+            },
+            zoom: {
+                enabled: true,
+                duration: 300 // don't foget to change the duration also in CSS
+            }
+    }); 
 });
