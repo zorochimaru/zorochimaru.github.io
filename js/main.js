@@ -17,10 +17,8 @@ $(document).ready(function() {
         afterLoad: function(anchorLink) {
             if (anchorLink == 'page3') {
                 window.randomize = function() {
-                    $('#python').attr('data-progress', Math.floor(70));
-                    $('#c').attr('data-progress', Math.floor(60));
-                    $('#java').attr('data-progress', Math.floor(30));
-                    $('#js').attr('data-progress', Math.floor(70));
+                    $('#python').attr('data-progress', Math.floor(30));
+                    $('#js').attr('data-progress', Math.floor(40));
                 }
                 setTimeout(window.randomize, 500);
                 $('.ko-progress-circle').click(window.randomize);
